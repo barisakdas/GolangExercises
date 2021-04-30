@@ -1,0 +1,13 @@
+Ana programımızda kullandığımız küçük bir kod parçacağı ile deneme.txt dosyamızı okuyoruz. Bu dosyayı seçerken dikkat ettiğiniz gibi önce dosya ismi, ardından işlem tipi (flag), ardından da dosya izni belirtilir. İşlem tiplerimizin neler olduğundan hızlıca bahsedelim çünkü bu kısım oldukça önemli;
+
+O_RDONLY : Dosyayı sadece okuma için (read-only) açar.
+O_WRONLY : Dosyayı sadece yazma için (write-only) açar. (Aşağıda yazma işlemlerinde kullanılacak)
+O_RDWR : Dosyayı hem okuma hem de yazma için (read-write) açar.
+Bu üç parametreden birisini mutlaka kullanılmalıdır. Bununla birlikte yukarıdakilere ilave olarak tercihen kullanabileceğimiz beş değişken daha vardır;
+
+O_APPEND : Dosyaya yazma işlemi yaparken veriyi dosyanın en sonuna ekler.
+O_CREATE : Dosyayı açarken eğer belirtilen isimde bir dosya yoksa oluşturur.
+O_EXCL : O_CREATE ile birlikte kullanılır. Yeni dosyanın oluşturulabilmesi için belirtilen isimde bir dosyanın bulunmaması gerekir.
+O_SYNC : Dosyanın synchronous I/O için açılmasını sağlar.
+O_TRUNC : Dosya eğer zaten mevcutsa ve normal bir dosya ise 0 uzunlukta dosyayı keser (truncate)
+Dosya izninden bahsedecek olursakta Linux'te olduğu gibi O_CREATE parametresi ile dosya mevcut değilse, yeni dosya oluştururken dosyaya izin değeri atabilirsiniz.
